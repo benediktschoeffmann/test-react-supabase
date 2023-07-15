@@ -12,9 +12,11 @@ const NavBar = () => {
     e.preventDefault();
     try {
       const { error } = await signOut();
-      console.log(error);
+      if (error) {
+        console.error(error);
+      }
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   };
 

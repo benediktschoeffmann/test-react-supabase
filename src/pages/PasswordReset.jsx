@@ -12,6 +12,7 @@ const PasswordReset = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      console.log("Hi");
       setLoading(true);
       const { error } = await passwordReset(emailRef.current.value);
       if (!error) {
